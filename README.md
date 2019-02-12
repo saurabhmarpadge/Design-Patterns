@@ -17,6 +17,9 @@
 * Composite 
 * [Decorator](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Decorator.java)
 * [Facade](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Facade.java) 
+* Flyweight
+* Proxy
+* MVC
 
 ## Behavioral
 
