@@ -9,7 +9,7 @@ interface SuperHeroFactory {
 }
 
 class MarvelSuperHeroFactory implements SuperHeroFactory {
-	MarvelSuperHero IronMan = new MarvelSuperHero("IronMan");
+	MarvelSuperHero IronMan = new MarvelSuperHero("Bhuvan Was Here <>");
 	public SuperHero ProduceSuperHero(){
 		return IronMan;
 	}
