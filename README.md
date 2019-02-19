@@ -7,7 +7,7 @@
 * [Singleton](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Singleton.java)
 * [Factory](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Factory.java)
 * [Abstract Factory](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/AbstractFactory.java) 
-* Builder
+* [Builder](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Builder.java) 
 * [Prototype](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Prototype.java) 
 
 ## Structural
