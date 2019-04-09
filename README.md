@@ -23,7 +23,7 @@
 
 ## Behavioral
 
-* Observer
+* [Observer](https://github.com/saurabhmarpadge/Design-Patterns-Fictional/blob/master/ObserverPattern)
 * [State](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/State.java)
 * [Strategy](https://github.com/saurabhmarpadge/Design-Patterns/blob/master/Strategy.java) 
 * Template
