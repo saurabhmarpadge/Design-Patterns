@@ -1,0 +1,76 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObserverPattern {
+
+    public static void main(String[] args){
+        WayneIndustries wayneIndustries = new WayneIndustries();
+        wayneIndustries.subscribeObserver(new Superhero("Batman"));
+        wayneIndustries.subscribeObserver(new Superhero("Robin"));
+
+        wayneIndustries.addWeapon("Batarang");
+        wayneIndustries.addWeapon("Batman's utility belt");
+    }
+
+}
+
+interface Subject {
+    void subscribeObserver(Observer observer);
+    void unsubscribeObserver(Observer observer);
+    void notifyAllObserver();
+}
+
+interface Observer {
+    void update(Subject subject);
+}
+
+class WayneIndustries implements Subject {
+
+    List<Observer> observerList;
+    List<String> weaponsList;
+
+    WayneIndustries(){
+        observerList = new ArrayList<Observer>();
+        weaponsList = new ArrayList<String>();
+    }
+
+    public void subscribeObserver(Observer observer) {
+        observerList.add(observer);
+    }
+
+    public void unsubscribeObserver(Observer observer) {
+        observerList.remove(observer);
+    }
+
+    public void notifyAllObserver() {
+        for(Observer observer: observerList){
+            observer.update(this);
+        }
+    }
+
+    public void addWeapon(String weapon){
+        weaponsList.add(weapon);
+        notifyAllObserver();
+    }
+
+    public List<String> getWeapon(){
+        return weaponsList;
+    }
+
+    public String toString(){
+        return weaponsList.toString();
+    }
+}
+
+class Superhero implements Observer {
+    private String name;
+
+    Superhero(String name){
+        this.name = name;
+    }
+
+    public void update(Subject subject) {
+        System.out.println(this.name + " got notified");
+        System.out.println(subject);
+    }
+}
